@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/stylesheets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d9228ebe19.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Todo app | Welcome</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Todos | Go complete it</h2>
+
+      <div class="todo">
+        <form action="/" method="post" class="todo__header">
+          <input type="text" name="content" />
+          <button type="submit"><span class="fas fa-plus"></span></button>
+        </form>
+
+        <ul class="todo__list">
+          <% todos.forEach(details => {%>
+          <li class="todo__listItem">
+            <div class="todo__ItemName"><%= details.content %></div>
+            <a href="/edit/<%= details._id %>" class="edit">
+              <span class="fas fa-edit"></span>
+            </a>
+            <a href="/remove/<%= details._id %>" class="remove">
+              <span class="fas fa-times"></span>
+            </a>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

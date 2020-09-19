@@ -1,0 +1,20 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "This is a todo app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Bheart Shrestha",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
